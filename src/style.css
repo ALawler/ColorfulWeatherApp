@@ -1,9 +1,9 @@
 #weatherApp {
-  margin-top: 50px;
+  margin-top: 25px;
+  max-width: 500px;
 }
 
 #mainImage {
-  font-size: 100px;
 }
 
 #day1,
