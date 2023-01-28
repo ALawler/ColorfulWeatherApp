@@ -19,16 +19,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="../ColorfulWeatherApp/src/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="weatherApp">
       <div class="row">
-        <div class="col-9 bg-primary">Image</div>
+        <div class="col-9 bg-primary" id="mainImage">Image</div>
         <div class="col-3 bg-info">
           Week Preview
           <div class="row">
-            <div class="col-6">Day 1</div>
-            <div class="col-6">Day 2</div>
+            <div class="col-6" id="day1">Day 1</div>
+            <div class="col-6" id="day2">Day 2</div>
           </div>
         </div>
       </div>
@@ -46,17 +48,17 @@
         </div>
         <div class="col-3 bg-primary">
           <div class="row">
-            <div class="col-6">Day 3</div>
-            <div class="col-6">Day 4</div>
+            <div class="col-6" id="day3">Day 3</div>
+            <div class="col-6" id="day4">Day 4</div>
           </div>
           <div class="row">
-            <div class="col-6">Day 5</div>
-            <div class="col-6">Day 6</div>
+            <div class="col-6" id="day5">Day 5</div>
+            <div class="col-6" id="day6">Day 6</div>
           </div>
         </div>
       </div>
       <div class="row bg-secondary">
-        <div clas="col-12">
+        <div clas="col-12" id="signature">
           This project was coded by
           <href
             url="https://www.linkedin.com/in/ashleylawler/"
