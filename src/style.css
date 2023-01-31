@@ -1,14 +1,25 @@
 .container {
   display: grid;
   margin: 0 auto;
-  max-width: 500px;
   margin-top: 25px;
+  max-width: 500px;
+  max-height: 500px;
   background-color: #333333;
+  border-radius: 120px;
+}
+
+.pillBackground {
+  grid-column: 1/3;
+  grid-row: 1/5;
+  justify-self: center;
+  align-self: center;
 }
 
 .mainIcon {
   grid-column: 1/3;
   grid-row: 1/3;
+  justify-self: center;
+  align-self: center;
 }
 
 .mainWeather {
@@ -19,6 +30,24 @@
 .weekly {
   grid-column: 3/5;
   grid-row: 1;
+}
+
+.daySunny {
+}
+
+.dayCloudy {
+}
+
+.dayWindy {
+}
+
+.dayRainy {
+}
+
+.dayStromy {
+}
+
+.dayNaturalDisaster {
 }
 
 .day1 {
