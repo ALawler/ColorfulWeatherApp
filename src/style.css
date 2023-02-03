@@ -125,45 +125,6 @@ figure {
   margin: 0;
 }
 
-/* .dayOneIcon
-.dayTwoIcon,
-.dayThreeIcon,
-.dayFourIcon,
-.dayFiveIcon,
-.daySixIcon {
-  position: absolute;
-  z-index: 0;
-  left: 0px;
-  bottom: 0px;
-  margin: 0;
-}
-
-.dayOneTemp,
-.dayTwoTemp,
-.dayThreeTemp,
-.dayFourTemp,
-.dayFiveTemp,
-.daySixTemp {
-  position: absolute;
-  z-index: 100;
-  left: 40px;
-  bottom: 58px;
-  margin: 0;
-}
-
-.dayOneHumd,
-.dayTwoHumd,
-.dayThreeHumd,
-.dayFourHumd,
-.dayFiveHumd,
-.daySixHumd {
-  position: absolute;
-  z-index: 100;
-  left: 40px;
-  bottom: 58px;
-  margin: 0;
-}
-*/
 .signature {
   text-align: center;
   font-family: "Nunito", sans-serif;
