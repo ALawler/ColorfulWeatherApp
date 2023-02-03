@@ -133,3 +133,9 @@ figure {
   font-size: small;
   color: #999999;
 }
+
+#ashley:hover,
+#gitHub:hover {
+  cursor: crosshair;
+  color: #333333;
+}
