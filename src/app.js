@@ -1,8 +1,8 @@
-function searchCity(city) {
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiKey = "a5e6bc0563de46e667d1f0cec4ca9913";
+function searchCity(query) {
+  let apiEndpoint = "https://api.shecodes.io/weather/v1/current";
+  let key = "0bbef54a49efc7of4df96ea8t63e36a3";
   let units = "imperial";
-  let apiUrl = `${apiEndpoint}?q=${city}$appid=${apiKey}$units=${units}`;
+  let apiUrl = `${apiEndpoint}?q=${query}&key=${key}&units=${units}`;
 
   axios.get(apiUrl).then(console.log(apiUrl));
 }
