@@ -1,50 +1,50 @@
 function displayWeatherForcast(response) {
   document.querySelector(".dayOneTextDay").innerHTML = `Mon`;
   document.querySelector(".dayOneTextTemp").innerHTML = `${Math.round(
-    response.data.daily[1].temperature.day
+    response.data.daily[0].temperature.day
   )}°F`;
   document.querySelector(".dayOneTextHumd").innerHTML = `${Math.round(
-    response.data.daily[1].temperature.humidity
+    response.data.daily[0].temperature.humidity
   )}%`;
 
   document.querySelector(".dayTwoTextDay").innerHTML = `Tue`;
   document.querySelector(".dayTwoTextTemp").innerHTML = `${Math.round(
-    response.data.daily[2].temperature.day
+    response.data.daily[1].temperature.day
   )}°F`;
   document.querySelector(".dayTwoTextHumd").innerHTML = `${Math.round(
-    response.data.daily[2].temperature.humidity
+    response.data.daily[1].temperature.humidity
   )}%`;
 
   document.querySelector(".dayThreeTextDay").innerHTML = `Wed`;
   document.querySelector(".dayThreeTextTemp").innerHTML = `${Math.round(
-    response.data.daily[3].temperature.day
+    response.data.daily[2].temperature.day
   )}°F`;
   document.querySelector(".dayThreeTextHumd").innerHTML = `${Math.round(
-    response.data.daily[3].temperature.humidity
+    response.data.daily[2].temperature.humidity
   )}%`;
 
   document.querySelector(".dayFourTextDay").innerHTML = `Thu`;
   document.querySelector(".dayFourTextTemp").innerHTML = `${Math.round(
-    response.data.daily[4].temperature.day
+    response.data.daily[3].temperature.day
   )}°F`;
   document.querySelector(".dayFourTextHumd").innerHTML = `${Math.round(
-    response.data.daily[4].temperature.humidity
+    response.data.daily[3].temperature.humidity
   )}%`;
 
   document.querySelector(".dayFiveTextDay").innerHTML = `Fri`;
-  document.querySelector(".dayFoveTextTemp").innerHTML = `${Math.round(
-    response.data.daily[5].temperature.day
+  document.querySelector(".dayFiveTextTemp").innerHTML = `${Math.round(
+    response.data.daily[4].temperature.day
   )}°F`;
   document.querySelector(".dayFiveTextHumd").innerHTML = `${Math.round(
-    response.data.daily[5].temperature.humidity
+    response.data.daily[4].temperature.humidity
   )}%`;
 
   document.querySelector(".daySixTextDay").innerHTML = `Sat`;
   document.querySelector(".daySixTextTemp").innerHTML = `${Math.round(
-    response.data.daily[6].temperature.day
+    response.data.daily[5].temperature.day
   )}°F`;
   document.querySelector(".daySixTextHumd").innerHTML = `${Math.round(
-    response.data.daily[6].temperature.humidity
+    response.data.daily[5].temperature.humidity
   )}%`;
 }
 
