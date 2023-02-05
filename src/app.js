@@ -149,6 +149,12 @@ function searchCity(query) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function submitCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#cityInput");
+  searchCity(cityInput.value);
+}
+
 searchCity("Detroit");
 
 //Live Day/Date/Time
