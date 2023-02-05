@@ -22,10 +22,10 @@ function displayWeather(response) {
   )} °F`;
   document.querySelector("#humidity").innerHTML = `${Math.round(
     response.data.temperature.humidity
-  )}`;
+  )}% humidity`;
   document.querySelector("#windSpeed").innerHTML = `${Math.round(
     response.data.wind.speed
-  )}`;
+  )}mph windspeed`;
 
   //cityForecast("Seattle");//
 }
@@ -39,4 +39,62 @@ function searchCity(query) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-searchCity("Seattle");
+searchCity("Detroit");
+
+//Live Day/Date/Time
+function dateFormat(current) {
+  let dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let dayName = dayNames[current.getDay()];
+
+  let monthNumbers = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+  ];
+
+  let monthNumber = monthNumbers[current.getMonth()];
+
+  let day = current.getDate();
+  let year = current.getFullYear();
+  let hour = current.getHours();
+  let amPm = "am";
+
+  if (hour >= 12) {
+    hour = `${hour}` - 12;
+    amPm = `pm`;
+  }
+
+  if (hour === 0) {
+    hour = `12`;
+    amPm = `am`;
+  }
+
+  let minutes = current.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${dayName} ${monthNumber}/${day}/${year} &nbsp ${hour}:${minutes}${amPm}`;
+}
+
+let currentDateTime = document.querySelector("#dayDateTime");
+let current = new Date();
+currentDateTime.innerHTML = dateFormat(current);
