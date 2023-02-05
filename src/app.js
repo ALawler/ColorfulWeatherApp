@@ -46,6 +46,67 @@ function displayWeatherForcast(response) {
   document.querySelector(".daySixTextHumd").innerHTML = `${Math.round(
     response.data.daily[5].temperature.humidity
   )}%`;
+
+  let dayOneIcon = document.querySelector(".dayOneIcon");
+  let dayTwoIcon = document.querySelector(".dayTwoIcon");
+  let dayThreeIcon = document.querySelector(".dayThreeIcon");
+  let dayFourIcon = document.querySelector(".dayFourIcon");
+  let dayFiveIcon = document.querySelector(".dayFiveIcon");
+  let daySixIcon = document.querySelector(".daySixIcon");
+
+  dayOneIcon.setAttribute(
+    "src",
+    `${response.data.daily[0].condition.icon_url}`
+  );
+  dayOneIcon.setAttribute(
+    "alt",
+    `${response.data.daily[0].condition.description}`
+  );
+
+  dayTwoIcon.setAttribute(
+    "src",
+    `${response.data.daily[1].condition.icon_url}`
+  );
+  dayTwoIcon.setAttribute(
+    "alt",
+    `${response.data.daily[1].condition.description}`
+  );
+
+  dayThreeIcon.setAttribute(
+    "src",
+    `${response.data.daily[2].condition.icon_url}`
+  );
+  dayThreeIcon.setAttribute(
+    "alt",
+    `${response.data.daily[2].condition.description}`
+  );
+
+  dayFourIcon.setAttribute(
+    "src",
+    `${response.data.daily[3].condition.icon_url}`
+  );
+  dayFourIcon.setAttribute(
+    "alt",
+    `${response.data.daily[3].condition.description}`
+  );
+
+  dayFiveIcon.setAttribute(
+    "src",
+    `${response.data.daily[4].condition.icon_url}`
+  );
+  dayFiveIcon.setAttribute(
+    "alt",
+    `${response.data.daily[4].condition.description}`
+  );
+
+  daySixIcon.setAttribute(
+    "src",
+    `${response.data.daily[5].condition.icon_url}`
+  );
+  daySixIcon.setAttribute(
+    "alt",
+    `${response.data.daily[5].condition.description}`
+  );
 }
 
 function cityForecast(query) {

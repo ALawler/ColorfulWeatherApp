@@ -62,7 +62,7 @@
   grid-row: 1;
   justify-self: center;
   align-self: flex-end;
-  color: #f4cb69;
+  color: #a9dbd5;
 }
 
 figure {
@@ -110,8 +110,19 @@ figure {
   position: absolute;
   z-index: 100;
   left: 45px;
-  bottom: 25px;
+  bottom: 20px;
   margin: 0;
+  font-size: small;
+}
+
+.dayOneIcon,
+.dayTwoIcon,
+.dayThreeIcon,
+.dayFourIcon,
+.dayFiveIcon,
+.daySixIcon {
+  height: 50px;
+  margin: -8px;
 }
 
 .signature {
