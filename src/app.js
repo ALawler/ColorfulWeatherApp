@@ -136,8 +136,6 @@ function displayWeather(response) {
   document.querySelector("#windSpeed").innerHTML = `${Math.round(
     response.data.wind.speed
   )}mph windspeed`;
-
-  cityForecast("Detroit");
 }
 
 function searchCity(query) {
@@ -155,7 +153,17 @@ function submitCity(event) {
   searchCity(cityInput.value);
 }
 
+function submitForecast(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#cityInput");
+  cityForecast(cityInput.value);
+}
+
+let form = document.querySelector("searchFomr");
+form.addEventListener("submit", submitCity, submitForecast);
+
 searchCity("Detroit");
+cityForecast("Detroit");
 
 //Live Day/Date/Time
 function dateFormat(current) {
