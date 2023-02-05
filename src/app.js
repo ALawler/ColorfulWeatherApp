@@ -58,6 +58,11 @@ function cityForecast(query) {
 }
 
 function displayWeather(response) {
+  let mainIcon = document.querySelector(".mainIcon");
+
+  mainIcon.setAttribute("src", `${response.data.condition.icon_url}`);
+  mainIcon.setAttribute("alt", `${response.data.condition.description}`);
+
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
   document.querySelector("#place").innerHTML = response.data.city;

@@ -19,12 +19,12 @@
   align-self: center;
 }
 
-.mainIcon {
+.mainIconPlacement {
   grid-column: 1/3;
   grid-row: 1/3;
-  font-size: 125px;
   justify-self: center;
   align-self: center;
+  scale: 200%;
 }
 
 .mainWeather {
