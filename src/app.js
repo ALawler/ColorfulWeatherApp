@@ -187,7 +187,7 @@ function displayWeather(response) {
   document.querySelector("#place").innerHTML = response.data.city;
   document.querySelector("#temp").innerHTML = `${Math.round(
     response.data.temperature.current
-  )} °F`;
+  )}`;
   document.querySelector("#humidity").innerHTML = `${Math.round(
     response.data.temperature.humidity
   )}% humidity`;

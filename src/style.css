@@ -49,9 +49,16 @@
 }
 
 #place,
-#temp {
+#tempUnits {
   font-size: X-large;
   text-align: center;
+}
+
+#fahrenheit,
+#celcius {
+  font-size: small;
+  color: #444444;
+  text-decoration: none;
 }
 
 #degree {
