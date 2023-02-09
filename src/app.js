@@ -49,7 +49,7 @@ function dateFormat(current) {
     minutes = `0${minutes}`;
   }
 
-  return `${dayName} ${monthNumber}/${day}/${year} &nbsp ${hour}:${minutes}${amPm}`;
+  return `${dayName} ${monthNumber}/${day}/${year} ${hour}:${minutes}${amPm}`;
 }
 
 let currentDateTime = document.querySelector("#dayDateTime");
@@ -173,7 +173,7 @@ function cityForecast(query) {
   let units = "imperial";
   let apiUrl = `${apiEndpoint}?query=${query}&key=${key}&units=${units}`;
 
-  axios.get(apiUrl).then(displayWeatherForcast);
+  axios.get(apiUrl).then(console.log(apiUrl));
 }
 
 function displayWeather(response) {
@@ -202,18 +202,18 @@ function searchCity(query) {
   let units = "imperial";
   let apiUrl = `${apiEndpoint}?query=${query}&key=${key}&units=${units}`;
 
-  axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(console.log(apiUrl));
 }
 
 function submitCityForecast(event) {
   event.preventDefault();
-  let cityInput = document.querySelector("#cityInput");
+  let cityInput = document.querySelector(".cityInput");
   searchCity(cityInput.value);
   cityForecast(cityInput.value);
 }
 
-let form = document.querySelector("#searchForm");
-form.addEventListener("submit", submitCityForecast);
+let serchForm = document.querySelector("searchForm");
+searchForm.addEventListener("submit", submitCityForecast);
 
 searchCity("Detroit");
 cityForecast("Detroit");
