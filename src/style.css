@@ -64,12 +64,14 @@
   grid-row: 1;
   justify-self: center;
   align-self: center;
+  color: #888888;
 }
 
 .cityInput,
 .enterButton {
   background-color: #333333;
   border-color: #333333;
+  color: #888888;
   font-family: "Nunito", sans-serif;
 }
 
