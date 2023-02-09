@@ -173,7 +173,7 @@ function cityForecast(query) {
   let units = "imperial";
   let apiUrl = `${apiEndpoint}?query=${query}&key=${key}&units=${units}`;
 
-  axios.get(apiUrl).then(console.log(apiUrl));
+  axios.get(apiUrl).then(displayWeatherForcast);
 }
 
 function displayWeather(response) {
@@ -202,7 +202,7 @@ function searchCity(query) {
   let units = "imperial";
   let apiUrl = `${apiEndpoint}?query=${query}&key=${key}&units=${units}`;
 
-  axios.get(apiUrl).then(console.log(apiUrl));
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function submitCityForecast(event) {
