@@ -56,6 +56,7 @@ let currentDateTime = document.querySelector("#dayDateTime");
 let current = new Date();
 currentDateTime.innerHTML = dateFormat(current);
 
+//Main Weather and Forecast API
 function displayWeatherForcast(response) {
   document.querySelector(".dayOneTextDay").innerHTML = `Mon`;
   document.querySelector(".dayOneTextTemp").innerHTML = `${Math.round(
@@ -210,6 +211,7 @@ function submitCityForecast(event) {
   let cityInput = document.querySelector(".cityInput");
   searchCity(cityInput.value);
   cityForecast(cityInput.value);
+  dateFormat(cityInput.value);
 }
 
 let serchForm = document.querySelector("searchForm");

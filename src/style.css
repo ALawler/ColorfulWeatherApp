@@ -54,11 +54,23 @@
   text-align: center;
 }
 
-#fahrenheit,
-#celcius {
+#break {
   font-size: small;
-  color: #444444;
+}
+
+#currentUnit,
+#secondaryUnit {
+  font-size: small;
+  color: #333333;
   text-decoration: none;
+}
+
+#currentUnit:hover,
+#celcius:hover {
+  font-size: small;
+  color: #333333;
+  text-decoration: none;
+  cursor: default;
 }
 
 #degree {
