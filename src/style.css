@@ -40,6 +40,10 @@
   margin: 0%;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 #description,
 #dayDateTime,
 #humidity,
@@ -48,29 +52,25 @@
   text-align: center;
 }
 
+#currentUnit {
+  color: #333333;
+  text-decoration: none;
+}
+
+#currentUnit:hover {
+  color: #555555;
+  text-decoration: none;
+  cursor: default;
+}
+
 #place,
-#tempUnits {
+#mainTemp {
   font-size: X-large;
   text-align: center;
 }
 
-#break {
-  font-size: small;
-}
-
-#currentUnit,
-#secondaryUnit {
-  font-size: small;
-  color: #333333;
-  text-decoration: none;
-}
-
-#currentUnit:hover,
-#celcius:hover {
-  font-size: small;
-  color: #333333;
-  text-decoration: none;
-  cursor: default;
+#units {
+  font-size: medium;
 }
 
 #degree {

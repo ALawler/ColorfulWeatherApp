@@ -191,10 +191,12 @@ function displayWeather(response) {
   )}`;
   document.querySelector("#humidity").innerHTML = `${Math.round(
     response.data.temperature.humidity
-  )}% humidity`;
+  )}%`;
   document.querySelector("#windSpeed").innerHTML = `${Math.round(
     response.data.wind.speed
-  )}mph windspeed`;
+  )} mph`;
+
+  currentTemp = `${Math.round(response.data.temperature.current)}`;
 }
 
 function searchCity(query) {
@@ -211,7 +213,7 @@ function submitCityForecast(event) {
   let cityInput = document.querySelector(".cityInput");
   searchCity(cityInput.value);
   cityForecast(cityInput.value);
-  dateFormat(cityInput.value);
+  dateFormat(console.log(cityInput.value));
 }
 
 let serchForm = document.querySelector("searchForm");
@@ -219,3 +221,27 @@ searchForm.addEventListener("submit", submitCityForecast);
 
 searchCity("Detroit");
 cityForecast("Detroit");
+
+//F to C
+function revertTemp(event) {
+  event.preventDefault();
+  document.querySelector("#temp").innerHTML = Math.round(currentTemp);
+  document.querySelector("#units").innerHTML = "°F";
+}
+
+function unitConversion(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temp");
+  let units = document.querySelector("#units");
+  let tempC = ((currentTemp - 32) * 5) / 9;
+
+  temp.innerHTML = Math.round(tempC);
+  units.innerHTML = "°C";
+
+  tempUnit.addEventListener("click", revertTemp);
+}
+
+let tempUnit = document.querySelector("#mainTemp");
+tempUnit.addEventListener("click", unitConversion);
+
+let currentTemp = null;
